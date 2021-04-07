@@ -2,8 +2,9 @@
 // It's really simple, but can save you a little time and make
 // your code look a bit nicer.
 //
-// Keep in mind, that when an attribute is set, it will be
-// applied to everything, until reseted.
+// Repository: github.com/t3mp14r3/visual
+//
+// Not all options can be set together
 //
 // To reset everything you can use RESET sequence of
 // RESETF function
@@ -24,8 +25,7 @@
 #define ITALIC  ESCAPE "[3m"
 #define UNDER   ESCAPE "[4m"
 #define BLINK   ESCAPE "[5m"
-#define INVERSE ESCAPE "[6m"
-#define INVIS   ESCAPE "[7m"
+#define INVERSE ESCAPE "[7m"
 #define STRIKE  ESCAPE "[8m"
 
 // Text 256 colors

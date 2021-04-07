@@ -13,9 +13,15 @@ int main() {
 
     // Bold text and reset
     printf(BOLD "Bold text.\n" RESET);
+    printf(DIM "Dimmed text.\n" RESET);
+    printf(ITALIC "Italic text.\n" RESET);
+    printf(UNDER "Underlined text.\n" RESET);
+    printf(BLINK "Blinking text.\n" RESET);
+    printf(INVERSE "Inversed text.\n" RESET);
+    printf(STRIKE "Stroked text.\n" RESET);
 
     // Dim, blinking and crossed text
-    printf(DIM BLINK "Messy text.\n" RESET);
+    printf(DIM STRIKE "Messy text.\n" RESET);
 
     // Text, colored with 256 colors
     FG_256(51);
@@ -35,17 +41,19 @@ int main() {
     FG_DISABLE();
     printf("Disabled foreground.\n");
 
+	// Reset via function
+    RESETF();
+
+	printf("Enter a char and hit enter...");
+
     // Hide the output
     OUTPUT_HIDE();
 
     // Get some user input to check the hidden input and the output
     int ch = getchar();
 
-    // Reset via function
-    RESETF();
-    
-    // Display the user input normally
-    printf("%c\n", ch);
+    // Display the input normally
+    printf(RESET "\n%c\n", ch);
 
     // Show the cursor and end this test
     CURSOR_SHOW();
